@@ -3,6 +3,25 @@
 'QQÈº£º155374244
 
 
+dim PCGameSDK_Path
+
+
+PCGameSDK_Path="./YuanShen_Data/Plugins/PCGameSDK.dll"
+Function IsExitAFile(filespec)
+        Dim fso
+        Set fso=CreateObject("Scripting.FileSystemObject")        
+        If fso.fileExists(filespec) Then         
+        IsExitAFile=True        
+        Else IsExitAFile=False        
+        End If
+End Function 
+
+
+IF IsExitAFile(a)=False Then 
+
+msgbox "PCGameSDK.dllÎÄ¼þÈ±Ê§"
+
+End If
 
 
 
