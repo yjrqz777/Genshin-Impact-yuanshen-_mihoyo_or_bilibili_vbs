@@ -7,6 +7,7 @@ dim PCGameSDK_Path
 
 
 PCGameSDK_Path="./YuanShen_Data/Plugins/PCGameSDK.dll"
+
 Function IsExitAFile(filespec)
         Dim fso
         Set fso=CreateObject("Scripting.FileSystemObject")        
@@ -19,9 +20,24 @@ End Function
 
 IF IsExitAFile(a)=False Then 
 
-msgbox "PCGameSDK.dll文件缺失"
 
-End If
+a=msgbox("PCGameSDK.dll文件缺失"&chr(10)&"请前往这里下载所需文件"&chr(10)&"https://yjrqz.lanzoui.com/b01oi27oh 密码:8za8"&chr(10)&"移动到原神此路径/YuanShen_Data/Plugins/",vbCritical + vbYesNo,"错误")
+
+' "PCGameSDK.dll文件缺失"&chr(10)&"请前往这里下载所需文件"&chr(10)&"https://yjrqz.lanzoui.com/b01oi27oh 密码:8za8"&chr(10)&"移动到原神此路径/YuanShen_Data/Plugins/"
+
+
+if a then
+
+Set Sh = WScript.CreateObject("WScript.Shell")
+
+Sh.Run "http://t.csdnimg.cn/GU1z3", 3
+
+end if
+
+
+ElseIf IsExitAFile(a)=True Then
+
+
 
 
 
@@ -75,4 +91,8 @@ set fz = CreateObject("Scripting.FileSystemObject")
 call fz.CopyFile(outfile, infile) '两个参数的文件名部分可以不同
 set fz = nothing
 msgbox "感谢使用！"&chr(10)&"此为升级版，不必每个版本更新，有问题请反馈"&chr(10)&"QQ群：155374244"
+
 'msgbox info
+
+
+End If
