@@ -57,8 +57,6 @@ End If
 
 
 
-
-
 Set f1=fso.OpenTextFile(infile,1)
 Set f2=fso.CreateTextFile(outfile,2)
 n=0
@@ -79,7 +77,5 @@ set fz = CreateObject("Scripting.FileSystemObject")
 call fz.CopyFile(outfile, infile) '两个参数的文件名部分可以不同
 set fz = nothing
 msgbox "感谢使用！"&chr(10)&"此为升级版，不必每个版本更新，有问题请反馈"&chr(10)&"QQ群：155374244"
-
-'msgbox info
 
 End If

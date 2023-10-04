@@ -1,7 +1,0 @@
-[General]
-channel=1
-cps=mihoyo
-sub_channel=1
-game_version=4.1.0
-plugin_5_version=2.6.0
-plugin_sdk_version=3.5.0
